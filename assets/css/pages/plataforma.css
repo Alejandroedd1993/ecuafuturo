@@ -3,24 +3,30 @@
    ============================================================ */
 
 .plataforma-hero {
-  background: linear-gradient(160deg, var(--color-text-dark) 0%, #0F3D29 100%);
+  background:
+    linear-gradient(90deg, var(--color-tech-grid) 1px, transparent 1px),
+    linear-gradient(180deg, var(--color-tech-grid) 1px, transparent 1px),
+    linear-gradient(160deg, var(--color-text-dark) 0%, var(--color-primary) 100%);
+  background-size: 48px 48px, 48px 48px, auto;
   padding-block: var(--space-20) var(--space-24);
   overflow: hidden;
   position: relative;
 }
 
 [data-theme="dark"] .plataforma-hero {
-  background: linear-gradient(160deg, var(--color-surface) 0%, var(--color-bg-soft) 100%);
+  background:
+    linear-gradient(90deg, var(--color-tech-grid) 1px, transparent 1px),
+    linear-gradient(180deg, var(--color-tech-grid) 1px, transparent 1px),
+    linear-gradient(160deg, var(--color-surface) 0%, var(--color-bg-soft) 100%);
+  background-size: 48px 48px, 48px 48px, auto;
 }
 
 .plataforma-hero__glow {
   position: absolute;
-  top: -100px;
-  right: -100px;
-  width: 500px;
-  height: 500px;
-  border-radius: var(--radius-full);
-  background: radial-gradient(circle, rgba(94, 196, 138, 0.15) 0%, transparent 70%);
+  inset: 0;
+  background:
+    linear-gradient(120deg, transparent 0%, var(--color-tech-wash) 42%, transparent 68%);
+  opacity: 0.78;
   pointer-events: none;
 }
 
@@ -48,7 +54,7 @@
 }
 
 .plataforma-hero h1 {
-  color: var(--color-text-inverse);
+  color: var(--color-tech-text);
   margin-bottom: var(--space-5);
 }
 
@@ -58,7 +64,7 @@
 }
 
 .plataforma-hero__desc {
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--color-tech-text-muted);
   font-size: var(--text-lg);
   line-height: 1.7;
   max-width: 520px;
@@ -68,23 +74,28 @@
 .plataforma-hero__mockup {
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: 0 24px 64px rgba(0,0,0,0.4);
-  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--color-tech-border);
+  background: var(--color-tech-panel-soft);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  padding: var(--space-3);
 }
 
 /* ============================
    APP MOCKUP — interfaz simulada
    ============================ */
 .app-mockup {
-  background: #0F1A14;
+  background: var(--color-tech-panel);
   border-radius: var(--radius-lg);
   overflow: hidden;
   font-family: var(--font-body);
+  border: 1px solid var(--color-tech-border);
 }
 
 .app-mockup__bar {
-  background: #162318;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  background: var(--color-tech-panel-soft);
+  border-bottom: 1px solid var(--color-tech-border);
   padding: var(--space-3) var(--space-4);
   display: flex;
   align-items: center;
@@ -331,7 +342,11 @@
 }
 
 .ia-section {
-  background: linear-gradient(135deg, var(--color-bg-soft) 0%, var(--color-surface) 100%);
+  background:
+    linear-gradient(90deg, transparent 0, transparent calc(100% - 1px), var(--color-paper-texture) calc(100% - 1px)),
+    linear-gradient(180deg, transparent 0, transparent calc(100% - 1px), var(--color-paper-texture) calc(100% - 1px)),
+    linear-gradient(135deg, var(--color-bg-soft) 0%, var(--color-surface) 100%);
+  background-size: 40px 40px, 40px 40px, auto;
 }
 
 .ia-section__inner {
@@ -378,11 +393,67 @@
 }
 
 .ia-section__visual {
-  background-color: var(--color-surface);
+  background:
+    linear-gradient(180deg, var(--color-surface) 0%, var(--color-surface-raised) 100%);
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-border);
   padding: var(--space-8);
   box-shadow: var(--shadow-card);
+}
+
+.ia-section__visual .chat-bubble {
+  opacity: 0;
+  transform: translateY(var(--space-3));
+  animation: tutor-bubble-in 700ms ease forwards;
+}
+
+.ia-section__visual .chat-bubble:nth-of-type(2) {
+  animation-delay: 180ms;
+}
+
+.ia-section__visual .chat-bubble:nth-of-type(3) {
+  animation-delay: 380ms;
+}
+
+.ia-section__visual .chat-bubble:nth-of-type(4) {
+  animation-delay: 580ms;
+}
+
+.chat-bubble--ai:last-child {
+  position: relative;
+}
+
+.chat-bubble--ai:last-child::after {
+  content: '';
+  display: inline-block;
+  width: 0.55em;
+  height: 1em;
+  margin-left: var(--space-1);
+  border-right: 2px solid currentColor;
+  vertical-align: -0.15em;
+  animation: tutor-caret 900ms steps(1) infinite;
+}
+
+@keyframes tutor-bubble-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes tutor-caret {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ia-section__visual .chat-bubble,
+  .chat-bubble--ai:last-child::after {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .chat-bubble {

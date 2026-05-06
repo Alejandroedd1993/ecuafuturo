@@ -96,6 +96,31 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ============================
+  // REVEAL PROGRESIVO
+  // ============================
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const revealTargets = document.querySelectorAll(
+    '.section-header, .pillar-card, .book-card, .platform-teaser, .route-card, .feature-card, .activity-card, .ia-feature, .mision-vision__card, .valor-item, .advisor-item, .nivel-tile, .complementaria-tile, .coleccion-stat, .nivel-section, .libro-card, .motivo-card, .libro-destacado'
+  );
+
+  if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+    revealTargets.forEach((el, index) => {
+      el.classList.add('reveal-item');
+      el.style.setProperty('--reveal-delay', `${Math.min(index % 4, 3) * 70}ms`);
+    });
+
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      });
+    }, { threshold: 0.14, rootMargin: '0px 0px -8% 0px' });
+
+    revealTargets.forEach(el => revealObserver.observe(el));
+  }
+
+  // ============================
   // MARCAR PÁGINA ACTIVA EN NAVBAR
   // ============================
   const currentPath = window.location.pathname;

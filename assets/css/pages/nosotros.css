@@ -4,7 +4,11 @@
 
 .nosotros-hero {
   padding-block: var(--space-16) var(--space-20);
-  background: linear-gradient(160deg, var(--color-bg-soft) 0%, var(--color-surface) 70%);
+  background:
+    linear-gradient(90deg, transparent 0, transparent calc(100% - 1px), var(--color-paper-texture) calc(100% - 1px)),
+    linear-gradient(180deg, transparent 0, transparent calc(100% - 1px), var(--color-paper-texture) calc(100% - 1px)),
+    linear-gradient(160deg, var(--color-bg-soft) 0%, var(--color-surface) 70%);
+  background-size: 38px 38px, 38px 38px, auto;
 }
 
 .nosotros-hero__inner {
@@ -51,12 +55,12 @@
 .mision-vision__card--primary {
   background-color: var(--color-primary);
   border-color: transparent;
-  color: #f8fafc;
+  color: var(--color-text-on-primary);
 }
 
 .mision-vision__card--primary h2,
 .mision-vision__card--primary h3 {
-  color: #f8fafc;
+  color: var(--color-text-on-primary);
 }
 
 .mision-vision__card h2,
@@ -71,7 +75,8 @@
 }
 
 .mision-vision__card.mision-vision__card--primary p {
-  color: rgba(248, 250, 252, 0.92);
+  color: var(--color-text-on-primary);
+  opacity: 0.92;
 }
 
 .valores-grid {
@@ -84,10 +89,14 @@
   display: flex;
   align-items: flex-start;
   gap: var(--space-5);
-  padding: var(--space-5);
-  background-color: var(--color-surface-raised);
+  padding: var(--space-6);
+  background:
+    linear-gradient(180deg, var(--color-surface) 0%, var(--color-surface-raised) 100%);
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-border);
+  min-height: 180px;
+  box-shadow: var(--shadow-card);
+  height: 100%;
 }
 
 .valor-item__icon {
@@ -169,5 +178,11 @@
 
   .valores-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .valores-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }

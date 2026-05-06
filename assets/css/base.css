@@ -44,6 +44,15 @@
   --color-surface:          #FFFFFF;
   --color-surface-raised:   #F4FBF5;   /* Tarjetas, paneles elevados */
   --color-surface-overlay:  rgba(27, 94, 71, 0.04); /* Hover sobre superficies */
+  --color-paper-texture:    rgba(27, 94, 71, 0.035);
+  --color-paper-rule:       rgba(27, 94, 71, 0.14);
+  --color-tech-panel:       rgba(15, 26, 20, 0.74);
+  --color-tech-panel-soft:  rgba(255, 255, 255, 0.08);
+  --color-tech-border:      rgba(255, 255, 255, 0.16);
+  --color-tech-grid:        rgba(199, 242, 94, 0.08);
+  --color-tech-wash:        rgba(199, 242, 94, 0.10);
+  --color-tech-text:        #FFFFFF;
+  --color-tech-text-muted:  rgba(255, 255, 255, 0.78);
 
   /* --- Texto --- */
   --color-text:             #4A5568;   /* Gris pizarra — texto general */
@@ -222,6 +231,15 @@
   --color-surface:          #1A2620;   /* Superficies base */
   --color-surface-raised:   #213028;   /* Superficies elevadas (tarjetas) */
   --color-surface-overlay:  rgba(94, 196, 138, 0.06);
+  --color-paper-texture:    rgba(184, 212, 191, 0.045);
+  --color-paper-rule:       rgba(184, 212, 191, 0.16);
+  --color-tech-panel:       rgba(15, 26, 20, 0.78);
+  --color-tech-panel-soft:  rgba(255, 255, 255, 0.08);
+  --color-tech-border:      rgba(255, 255, 255, 0.15);
+  --color-tech-grid:        rgba(186, 239, 78, 0.08);
+  --color-tech-wash:        rgba(186, 239, 78, 0.10);
+  --color-tech-text:        #E8F5EC;
+  --color-tech-text-muted:  rgba(232, 245, 236, 0.78);
 
   /* --- Texto --- */
   --color-text:             #B8D4BF;   /* Texto general sobre oscuro */
@@ -284,6 +302,15 @@
     --color-surface:          #1A2620;
     --color-surface-raised:   #213028;
     --color-surface-overlay:  rgba(94, 196, 138, 0.06);
+    --color-paper-texture:    rgba(184, 212, 191, 0.045);
+    --color-paper-rule:       rgba(184, 212, 191, 0.16);
+    --color-tech-panel:       rgba(15, 26, 20, 0.78);
+    --color-tech-panel-soft:  rgba(255, 255, 255, 0.08);
+    --color-tech-border:      rgba(255, 255, 255, 0.15);
+    --color-tech-grid:        rgba(186, 239, 78, 0.08);
+    --color-tech-wash:        rgba(186, 239, 78, 0.10);
+    --color-tech-text:        #E8F5EC;
+    --color-tech-text-muted:  rgba(232, 245, 236, 0.78);
     --color-text:             #B8D4BF;
     --color-text-dark:        #E8F5EC;
     --color-text-muted:       #7A9E85;

@@ -6,7 +6,11 @@
    HERO HOME
    ============================ */
 .hero--home {
-  background: linear-gradient(160deg, var(--color-surface) 60%, var(--color-bg-soft) 100%);
+  background:
+    linear-gradient(90deg, transparent 0, transparent calc(100% - 1px), var(--color-paper-texture) calc(100% - 1px)),
+    linear-gradient(180deg, transparent 0, transparent calc(100% - 1px), var(--color-paper-texture) calc(100% - 1px)),
+    linear-gradient(160deg, var(--color-surface) 60%, var(--color-bg-soft) 100%);
+  background-size: 42px 42px, 42px 42px, auto;
 }
 
 .hero--home .hero__title span {
@@ -20,6 +24,61 @@
   width: 100%;
   max-width: 540px;
   margin-inline: auto;
+}
+
+.editorial-seal {
+  position: absolute;
+  right: calc(-1 * var(--space-4));
+  bottom: calc(-1 * var(--space-5));
+  width: 132px;
+  aspect-ratio: 1;
+  border-radius: var(--radius-full);
+  background:
+    linear-gradient(135deg, var(--color-surface) 0%, var(--color-bg-soft) 100%);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-lg);
+  display: grid;
+  place-items: center;
+  padding: var(--space-4);
+  text-align: center;
+  z-index: 2;
+}
+
+.editorial-seal::before {
+  content: '';
+  position: absolute;
+  inset: var(--space-2);
+  border-radius: inherit;
+  border: 1px solid var(--color-paper-rule);
+}
+
+.editorial-seal::after {
+  content: '';
+  position: absolute;
+  inset: calc(-1 * var(--space-1));
+  border-radius: inherit;
+  border: 2px solid transparent;
+  border-top-color: var(--color-accent-lime);
+  border-right-color: var(--color-primary-soft);
+  animation: editorial-seal-spin 18s linear infinite;
+}
+
+.editorial-seal span {
+  position: relative;
+  z-index: 1;
+  font-size: var(--text-xs);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-primary);
+  overflow-wrap: anywhere;
+}
+
+@keyframes editorial-seal-spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .hero__photo {
@@ -53,6 +112,13 @@
 @media (max-width: 767px) {
   .hero__photo-badge {
     left: var(--space-3);
+  }
+
+  .editorial-seal {
+    right: var(--space-3);
+    bottom: calc(-1 * var(--space-6));
+    width: 108px;
+    padding: var(--space-3);
   }
 }
 
@@ -149,6 +215,19 @@
   gap: var(--space-5);
   position: relative;
   overflow: hidden;
+  min-height: 260px;
+  height: 100%;
+  box-shadow: var(--shadow-card);
+}
+
+.pillar-card--wide {
+  background:
+    linear-gradient(135deg, var(--color-surface) 0%, var(--color-bg-soft) 100%);
+}
+
+.pillar-card--tall {
+  background:
+    linear-gradient(180deg, var(--color-surface) 0%, var(--color-surface-raised) 100%);
 }
 
 .pillar-card::before {
@@ -192,7 +271,8 @@
 
 @media (min-width: 768px) {
   .pillars-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
   }
 }
 
@@ -200,12 +280,27 @@
    CATÁLOGO DESTACADO
    ============================ */
 .featured-books {
-  background-color: var(--color-bg-soft);
+  background:
+    linear-gradient(90deg, transparent 0, transparent calc(100% - 1px), var(--color-paper-texture) calc(100% - 1px)),
+    linear-gradient(180deg, transparent 0, transparent calc(100% - 1px), var(--color-paper-texture) calc(100% - 1px)),
+    var(--color-bg-soft);
+  background-size: 36px 36px, 36px 36px, auto;
+  border-block: 1px solid var(--color-paper-rule);
 }
 
 .featured-books__footer {
   text-align: center;
   margin-top: var(--space-10);
+}
+
+@media (min-width: 900px) {
+  .featured-books .books-grid {
+    align-items: stretch;
+  }
+}
+
+.featured-books .book-card {
+  height: 100%;
 }
 
 .plan-card__cover--orange {
@@ -237,7 +332,11 @@
    TEASER PLATAFORMA
    ============================ */
 .platform-teaser {
-  background: linear-gradient(135deg, var(--color-primary) 0%, #0F3D29 100%);
+  background:
+    linear-gradient(90deg, var(--color-tech-grid) 1px, transparent 1px),
+    linear-gradient(180deg, var(--color-tech-grid) 1px, transparent 1px),
+    linear-gradient(135deg, var(--color-primary) 0%, var(--color-text-dark) 100%);
+  background-size: 44px 44px, 44px 44px, auto;
   border-radius: var(--radius-xl);
   padding: var(--space-12) var(--space-8);
   overflow: hidden;
@@ -247,12 +346,10 @@
 .platform-teaser::before {
   content: '';
   position: absolute;
-  top: -80px;
-  right: -80px;
-  width: 300px;
-  height: 300px;
-  border-radius: var(--radius-full);
-  background: rgba(199, 242, 94, 0.08);
+  inset: 0;
+  background:
+    linear-gradient(120deg, transparent 0%, var(--color-tech-wash) 48%, transparent 72%);
+  opacity: 0.75;
 }
 
 .platform-teaser__inner {
@@ -274,7 +371,7 @@
 }
 
 .platform-teaser h2 {
-  color: var(--color-text-inverse);
+  color: var(--color-tech-text);
   font-size: clamp(1.5rem, 3vw, 2.25rem);
   margin-bottom: var(--space-6);
 }
@@ -290,7 +387,7 @@
   display: flex;
   align-items: flex-start;
   gap: var(--space-3);
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--color-tech-text-muted);
   font-size: var(--text-base);
 }
 
@@ -308,9 +405,11 @@
 }
 
 .platform-teaser__mockup {
-  background-color: rgba(255, 255, 255, 0.08);
+  background-color: var(--color-tech-panel-soft);
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid var(--color-tech-border);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
   aspect-ratio: 16 / 10;
   display: flex;
   align-items: center;
@@ -410,5 +509,11 @@
 @media (min-width: 1024px) {
   .testimonials-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .editorial-seal::after {
+    animation: none;
   }
 }

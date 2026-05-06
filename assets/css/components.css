@@ -34,8 +34,14 @@
 }
 
 .navbar__logo-img {
-  height: 42px;
+  height: 48px;
   width: auto;
+}
+
+@media (max-width: 480px) {
+  .navbar__logo-img {
+    height: 42px;
+  }
 }
 
 /* Logo light/dark mode toggle */
@@ -432,6 +438,9 @@
   overflow: hidden;
   background-color: var(--color-bg-soft);
   position: relative;
+  transform: perspective(900px) rotateY(0deg) rotateX(0deg);
+  transform-origin: center left;
+  transition: transform var(--transition-slow), box-shadow var(--transition-slow);
 }
 
 .book-card__cover img {
@@ -443,6 +452,11 @@
 
 .book-card:hover .book-card__cover img {
   transform: scale(1.04);
+}
+
+.book-card:hover .book-card__cover {
+  transform: perspective(900px) rotateY(-5deg) rotateX(1.5deg) translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .book-card__cover-placeholder {
@@ -1084,6 +1098,37 @@
 .whatsapp-fab:hover {
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 8px 24px rgba(37, 211, 102, 0.5);
+}
+
+/* ============================
+   REVEAL PROGRESIVO
+   ============================ */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(var(--space-6));
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal-item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-item {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .book-card__cover,
+  .book-card:hover .book-card__cover,
+  .book-card__cover img,
+  .book-card:hover .book-card__cover img {
+    transform: none;
+    transition: none;
+  }
 }
 
 /* ============================

@@ -194,7 +194,7 @@ ecuafuturo-web/
 │   │   ├── components.css   ← Componentes reutilizables
 │   │   └── pages/
 │   │       ├── home.css
-│   │       ├── catalogo.css
+│   │       ├── coleccion.css
 │   │       ├── libro.css
 │   │       ├── docentes.css
 │   │       ├── plataforma.css
@@ -202,7 +202,6 @@ ecuafuturo-web/
 │   │       └── contacto.css
 │   ├── js/
 │   │   ├── main.js          ← Navbar, toggle de tema, íconos Lucide
-│   │   ├── catalogo.js      ← Filtros, búsqueda con debounce
 │   │   └── newsletter.js
 │   └── img/
 │       ├── logo.svg
