@@ -1,0 +1,728 @@
+/* ============================================================
+   BASE.CSS — Editorial Ecuafuturo
+   Reset moderno + Variables CSS + Tokens del sistema de diseño
+   Versión: 1.0 | Mayo 2026
+   ============================================================
+   ÍNDICE:
+   1. Google Fonts Import
+   2. Variables CSS — Light Mode
+   3. Variables CSS — Dark Mode
+   4. Reset moderno
+   5. Base tipográfica
+   6. Clases utilitarias
+   ============================================================ */
+
+
+/* ============================================================
+   1. GOOGLE FONTS IMPORT
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap');
+
+
+/* ============================================================
+   2. VARIABLES CSS — LIGHT MODE (defecto)
+   ============================================================ */
+
+:root {
+
+  /* --- Colores de marca --- */
+  --color-primary:          #1B5E47;   /* Verde profundo — principal */
+  --color-primary-hover:    #164d3a;   /* Verde profundo oscurecido — hover */
+  --color-primary-soft:     #98E4A3;   /* Verde menta — acentos, badges */
+  --color-bg-soft:          #EAF7EC;   /* Verde agua — fondos suaves */
+  --color-accent:           #3A9BD5;   /* Azul crayola — CTAs tech, links */
+  --color-accent-hover:     #2e82b8;   /* Azul oscurecido — hover */
+  --color-accent-lime:      #C7F25E;   /* Lima eléctrico — hover states, badge nuevo */
+
+  /* --- Superficies y fondos --- */
+  --color-bg:               #FFFFFF;
+  --color-bg-page:          #F8FAF8;   /* Fondo general de página, ligerísimo verde */
+  --color-surface:          #FFFFFF;
+  --color-surface-raised:   #F4FBF5;   /* Tarjetas, paneles elevados */
+  --color-surface-overlay:  rgba(27, 94, 71, 0.04); /* Hover sobre superficies */
+
+  /* --- Texto --- */
+  --color-text:             #4A5568;   /* Gris pizarra — texto general */
+  --color-text-dark:        #1A1F1B;   /* Negro verdoso — títulos */
+  --color-text-muted:       #718096;   /* Gris medio — texto secundario */
+  --color-text-disabled:    #A0AEC0;   /* Gris claro — elementos deshabilitados */
+  --color-text-inverse:     #FFFFFF;   /* Texto sobre fondos oscuros */
+  --color-text-on-primary:  #FFFFFF;   /* Texto sobre verde profundo */
+
+  /* --- Bordes --- */
+  --color-border:           #D1E8D5;   /* Verde claro — bordes suaves */
+  --color-border-strong:    #A8D5B0;   /* Verde medio — bordes con énfasis */
+  --color-border-focus:     #1B5E47;   /* Verde profundo — anillo de foco */
+
+  /* --- Estados de feedback --- */
+  --color-error:            #D94F4F;
+  --color-error-bg:         #FFF5F5;
+  --color-success:          #2E7D52;
+  --color-success-bg:       #F0FBF4;
+  --color-warning:          #D97706;
+  --color-warning-bg:       #FFFBEB;
+  --color-info:             #3A9BD5;
+  --color-info-bg:          #EBF5FB;
+
+  /* --- Tipografía --- */
+  --font-display:           'Playfair', Georgia, 'Times New Roman', serif;
+  --font-body:              'DM Sans', 'Helvetica Neue', Arial, sans-serif;
+
+  /* --- Escala tipográfica --- */
+  --text-xs:                0.75rem;     /* 12px */
+  --text-sm:                0.875rem;    /* 14px */
+  --text-base:              1rem;        /* 16px */
+  --text-lg:                1.125rem;    /* 18px */
+  --text-xl:                1.25rem;     /* 20px */
+  --text-2xl:               1.5rem;      /* 24px */
+  --text-3xl:               1.875rem;    /* 30px */
+  --text-4xl:               2.25rem;     /* 36px */
+  --text-5xl:               3rem;        /* 48px */
+  --text-6xl:               3.75rem;     /* 60px */
+  --text-7xl:               4.5rem;      /* 72px */
+
+  /* --- Tamaños responsivos con clamp --- */
+  --text-h1:                clamp(2.25rem, 5vw, 4rem);
+  --text-h2:                clamp(1.75rem, 3.5vw, 2.75rem);
+  --text-h3:                clamp(1.25rem, 2vw, 1.75rem);
+  --text-hero:              clamp(2.5rem, 6vw, 4.5rem);
+
+  /* --- Pesos tipográficos --- */
+  --font-light:             300;
+  --font-regular:           400;
+  --font-medium:            500;
+  --font-semibold:          600;
+  --font-bold:              700;
+  --font-extrabold:         800;
+
+  /* --- Altura de línea --- */
+  --leading-tight:          1.2;
+  --leading-snug:           1.4;
+  --leading-normal:         1.6;
+  --leading-relaxed:        1.75;
+  --leading-loose:          2;
+
+  /* --- Tracking (letter-spacing) --- */
+  --tracking-tight:        -0.02em;
+  --tracking-normal:        0;
+  --tracking-wide:          0.05em;
+  --tracking-wider:         0.1em;
+  --tracking-widest:        0.32em;     /* Para versalitas tipo "EDICIONES" */
+
+  /* --- Espaciado (múltiplos de 4px) --- */
+  --space-0:                0;
+  --space-1:                0.25rem;    /* 4px */
+  --space-2:                0.5rem;     /* 8px */
+  --space-3:                0.75rem;    /* 12px */
+  --space-4:                1rem;       /* 16px */
+  --space-5:                1.25rem;    /* 20px */
+  --space-6:                1.5rem;     /* 24px */
+  --space-7:                1.75rem;    /* 28px */
+  --space-8:                2rem;       /* 32px */
+  --space-10:               2.5rem;     /* 40px */
+  --space-12:               3rem;       /* 48px */
+  --space-14:               3.5rem;     /* 56px */
+  --space-16:               4rem;       /* 64px */
+  --space-20:               5rem;       /* 80px */
+  --space-24:               6rem;       /* 96px */
+  --space-32:               8rem;       /* 128px */
+
+  /* --- Border radius --- */
+  --radius-none:            0;
+  --radius-sm:              0.375rem;   /* 6px — chips, badges pequeños */
+  --radius-md:              0.75rem;    /* 12px — tarjetas, botones */
+  --radius-lg:              1.25rem;    /* 20px — secciones destacadas */
+  --radius-xl:              2rem;       /* 32px — hero, elementos orgánicos */
+  --radius-2xl:             3rem;       /* 48px — blobs decorativos */
+  --radius-full:            9999px;     /* Círculos y píldoras */
+
+  /* --- Sombras --- */
+  --shadow-xs:              0 1px 2px rgba(27, 94, 71, 0.06);
+  --shadow-sm:              0 1px 3px rgba(27, 94, 71, 0.08),
+                            0 1px 2px rgba(27, 94, 71, 0.04);
+  --shadow-md:              0 4px 6px rgba(27, 94, 71, 0.06),
+                            0 2px 4px rgba(27, 94, 71, 0.04);
+  --shadow-lg:              0 10px 15px rgba(27, 94, 71, 0.08),
+                            0 4px 6px rgba(27, 94, 71, 0.04);
+  --shadow-xl:              0 20px 25px rgba(27, 94, 71, 0.10),
+                            0 10px 10px rgba(27, 94, 71, 0.04);
+  --shadow-card:            0 2px 8px rgba(27, 94, 71, 0.08),
+                            0 0 0 1px var(--color-border);
+  --shadow-card-hover:      0 8px 24px rgba(27, 94, 71, 0.14),
+                            0 0 0 1px var(--color-border-strong);
+  --shadow-focus:           0 0 0 3px rgba(27, 94, 71, 0.25);
+  --shadow-focus-accent:    0 0 0 3px rgba(58, 155, 213, 0.30);
+
+  /* --- Transiciones --- */
+  --transition-fast:        150ms ease;
+  --transition-base:        200ms ease;
+  --transition-slow:        350ms ease;
+  --transition-bounce:      300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* --- Z-index --- */
+  --z-below:               -1;
+  --z-base:                 0;
+  --z-raised:               10;
+  --z-dropdown:             50;
+  --z-sticky:               80;
+  --z-navbar:               100;
+  --z-overlay:              200;
+  --z-modal:                300;
+  --z-toast:                400;
+  --z-tooltip:              500;
+
+  /* --- Layout --- */
+  --container-max:          1200px;
+  --container-wide:         1400px;
+  --container-narrow:       800px;
+  --container-padding:      var(--space-6);  /* 24px en móvil */
+  --navbar-height:          72px;
+  --navbar-height-mobile:   60px;
+
+  /* --- Breakpoints (referencia para JS) --- */
+  --bp-sm:                  640px;
+  --bp-md:                  768px;
+  --bp-lg:                  1024px;
+  --bp-xl:                  1280px;
+}
+
+
+/* ============================================================
+   3. VARIABLES CSS — DARK MODE
+   ============================================================ */
+
+[data-theme="dark"] {
+
+  /* --- Colores de marca adaptados --- */
+  --color-primary:          #5EC48A;   /* Verde más luminoso — legible sobre oscuro */
+  --color-primary-hover:    #4db378;
+  --color-primary-soft:     #2A6E4A;   /* Verde menta oscuro */
+  --color-bg-soft:          #162318;   /* Verde agua oscuro */
+  --color-accent:           #60B8E8;   /* Azul más claro */
+  --color-accent-hover:     #4da8dc;
+  --color-accent-lime:      #BAEF4E;   /* Lima ligeramente más suave */
+
+  /* --- Superficies y fondos --- */
+  --color-bg:               #0F1A14;   /* Negro verdoso profundo */
+  --color-bg-page:          #0F1A14;
+  --color-surface:          #1A2620;   /* Superficies base */
+  --color-surface-raised:   #213028;   /* Superficies elevadas (tarjetas) */
+  --color-surface-overlay:  rgba(94, 196, 138, 0.06);
+
+  /* --- Texto --- */
+  --color-text:             #B8D4BF;   /* Texto general sobre oscuro */
+  --color-text-dark:        #E8F5EC;   /* Títulos sobre oscuro */
+  --color-text-muted:       #7A9E85;
+  --color-text-disabled:    #4A6655;
+  --color-text-inverse:     #0F1A14;
+  --color-text-on-primary:  #0F1A14;
+
+  /* --- Bordes --- */
+  --color-border:           #2A3D2E;
+  --color-border-strong:    #3A5540;
+  --color-border-focus:     #5EC48A;
+
+  /* --- Estados de feedback --- */
+  --color-error:            #F87171;
+  --color-error-bg:         #2D1515;
+  --color-success:          #5EC48A;
+  --color-success-bg:       #0F2A1A;
+  --color-warning:          #FBBF24;
+  --color-warning-bg:       #2D1F05;
+  --color-info:             #60B8E8;
+  --color-info-bg:          #0A1D2D;
+
+  /* --- Sombras oscuras --- */
+  --shadow-xs:              0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-sm:              0 1px 3px rgba(0, 0, 0, 0.4),
+                            0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-md:              0 4px 6px rgba(0, 0, 0, 0.3),
+                            0 2px 4px rgba(0, 0, 0, 0.2);
+  --shadow-lg:              0 10px 15px rgba(0, 0, 0, 0.4),
+                            0 4px 6px rgba(0, 0, 0, 0.2);
+  --shadow-xl:              0 20px 25px rgba(0, 0, 0, 0.5),
+                            0 10px 10px rgba(0, 0, 0, 0.2);
+  --shadow-card:            0 2px 8px rgba(0, 0, 0, 0.3),
+                            0 0 0 1px var(--color-border);
+  --shadow-card-hover:      0 8px 24px rgba(0, 0, 0, 0.4),
+                            0 0 0 1px var(--color-border-strong);
+  --shadow-focus:           0 0 0 3px rgba(94, 196, 138, 0.30);
+  --shadow-focus-accent:    0 0 0 3px rgba(96, 184, 232, 0.35);
+}
+
+/* Detección automática de preferencia del sistema */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-primary:          #5EC48A;
+    --color-primary-hover:    #4db378;
+    --color-primary-soft:     #2A6E4A;
+    --color-bg-soft:          #162318;
+    --color-accent:           #60B8E8;
+    --color-accent-hover:     #4da8dc;
+    --color-accent-lime:      #BAEF4E;
+    --color-bg:               #0F1A14;
+    --color-bg-page:          #0F1A14;
+    --color-surface:          #1A2620;
+    --color-surface-raised:   #213028;
+    --color-surface-overlay:  rgba(94, 196, 138, 0.06);
+    --color-text:             #B8D4BF;
+    --color-text-dark:        #E8F5EC;
+    --color-text-muted:       #7A9E85;
+    --color-text-disabled:    #4A6655;
+    --color-text-inverse:     #0F1A14;
+    --color-text-on-primary:  #0F1A14;
+    --color-border:           #2A3D2E;
+    --color-border-strong:    #3A5540;
+    --color-border-focus:     #5EC48A;
+    --color-error:            #F87171;
+    --color-error-bg:         #2D1515;
+    --color-success:          #5EC48A;
+    --color-success-bg:       #0F2A1A;
+    --color-warning:          #FBBF24;
+    --color-warning-bg:       #2D1F05;
+    --color-info:             #60B8E8;
+    --color-info-bg:          #0A1D2D;
+    --shadow-xs:              0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-sm:              0 1px 3px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.2);
+    --shadow-md:              0 4px 6px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
+    --shadow-lg:              0 10px 15px rgba(0, 0, 0, 0.4), 0 4px 6px rgba(0, 0, 0, 0.2);
+    --shadow-xl:              0 20px 25px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.2);
+    --shadow-card:            0 2px 8px rgba(0, 0, 0, 0.3), 0 0 0 1px var(--color-border);
+    --shadow-card-hover:      0 8px 24px rgba(0, 0, 0, 0.4), 0 0 0 1px var(--color-border-strong);
+    --shadow-focus:           0 0 0 3px rgba(94, 196, 138, 0.30);
+    --shadow-focus-accent:    0 0 0 3px rgba(96, 184, 232, 0.35);
+  }
+}
+
+
+/* ============================================================
+   4. RESET MODERNO
+   ============================================================ */
+
+/* Box sizing universal */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Raíz del documento */
+html {
+  font-size: 100%;                  /* 16px base */
+  scroll-behavior: smooth;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  hanging-punctuation: first last;
+}
+
+/* Respeta la preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Body base */
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--font-regular);
+  line-height: var(--leading-normal);
+  color: var(--color-text);
+  background-color: var(--color-bg-page);
+  min-height: 100dvh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Imágenes y media */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Herencia tipográfica en inputs */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Párrafos y headings */
+p,
+h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: var(--font-bold);
+  line-height: var(--leading-tight);
+  color: var(--color-text-dark);
+  letter-spacing: var(--tracking-tight);
+}
+
+/* Links */
+a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--transition-fast),
+              text-decoration-color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-primary-hover);
+}
+
+/* Foco visible global — NUNCA ocultar sin reemplazo */
+:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* Listas */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Botones — reset base */
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+/* Tablas */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Formularios */
+fieldset {
+  border: none;
+}
+
+legend {
+  font-weight: var(--font-semibold);
+  color: var(--color-text-dark);
+}
+
+/* Citas */
+blockquote {
+  quotes: none;
+}
+
+/* HR */
+hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: var(--space-8) 0;
+}
+
+/* Selección de texto */
+::selection {
+  background-color: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+
+/* ============================================================
+   5. BASE TIPOGRÁFICA
+   ============================================================ */
+
+/* Jerarquía de headings */
+h1 { font-size: var(--text-h1); }
+h2 { font-size: var(--text-h2); }
+h3 { font-size: var(--text-h3); }
+h4 { font-size: var(--text-2xl); }
+h5 { font-size: var(--text-xl); }
+h6 { font-size: var(--text-lg); }
+
+/* Párrafo */
+p {
+  color: var(--color-text);
+  line-height: var(--leading-normal);
+  max-width: 68ch; /* Ancho óptimo de lectura */
+}
+
+/* Texto pequeño y captions */
+small,
+.text-sm {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+/* Énfasis */
+strong,
+b {
+  font-weight: var(--font-bold);
+  color: var(--color-text-dark);
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+/* Código */
+code,
+kbd,
+samp,
+pre {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9em;
+}
+
+code {
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.15em 0.4em;
+}
+
+
+/* ============================================================
+   6. CLASES UTILITARIAS
+   ============================================================ */
+
+/* --- Contenedores --- */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
+
+.container--wide {
+  max-width: var(--container-wide);
+}
+
+.container--narrow {
+  max-width: var(--container-narrow);
+}
+
+/* --- Accesibilidad --- */
+
+/* Oculto visualmente pero accesible para lectores de pantalla */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Skip link — visible al recibir foco */
+.skip-link {
+  position: absolute;
+  top: var(--space-4);
+  left: var(--space-4);
+  z-index: var(--z-toast);
+  padding: var(--space-3) var(--space-6);
+  background: var(--color-primary);
+  color: var(--color-text-on-primary);
+  font-family: var(--font-body);
+  font-weight: var(--font-semibold);
+  font-size: var(--text-sm);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transform: translateY(-120%);
+  transition: transform var(--transition-base);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* --- Tipografía utilitaria --- */
+.font-display    { font-family: var(--font-display); }
+.font-body       { font-family: var(--font-body); }
+
+.text-xs         { font-size: var(--text-xs); }
+.text-sm         { font-size: var(--text-sm); }
+.text-base       { font-size: var(--text-base); }
+.text-lg         { font-size: var(--text-lg); }
+.text-xl         { font-size: var(--text-xl); }
+.text-2xl        { font-size: var(--text-2xl); }
+.text-3xl        { font-size: var(--text-3xl); }
+
+.font-light      { font-weight: var(--font-light); }
+.font-regular    { font-weight: var(--font-regular); }
+.font-medium     { font-weight: var(--font-medium); }
+.font-semibold   { font-weight: var(--font-semibold); }
+.font-bold       { font-weight: var(--font-bold); }
+
+.text-left       { text-align: left; }
+.text-center     { text-align: center; }
+.text-right      { text-align: right; }
+
+.uppercase       { text-transform: uppercase; letter-spacing: var(--tracking-wider); }
+.capitalize      { text-transform: capitalize; }
+
+.tracking-wide   { letter-spacing: var(--tracking-wide); }
+.tracking-wider  { letter-spacing: var(--tracking-wider); }
+.tracking-widest { letter-spacing: var(--tracking-widest); }
+
+/* --- Colores de texto utilitarios --- */
+.text-primary    { color: var(--color-primary); }
+.text-accent     { color: var(--color-accent); }
+.text-muted      { color: var(--color-text-muted); }
+.text-dark       { color: var(--color-text-dark); }
+.text-inverse    { color: var(--color-text-inverse); }
+.text-success    { color: var(--color-success); }
+.text-error      { color: var(--color-error); }
+.text-warning    { color: var(--color-warning); }
+
+/* --- Fondos utilitarios --- */
+.bg-primary      { background-color: var(--color-primary); }
+.bg-soft         { background-color: var(--color-bg-soft); }
+.bg-surface      { background-color: var(--color-surface); }
+.bg-raised       { background-color: var(--color-surface-raised); }
+
+/* --- Espaciado utilitario --- */
+.mt-auto         { margin-top: auto; }
+.mb-auto         { margin-bottom: auto; }
+.mx-auto         { margin-inline: auto; }
+
+/* --- Flexbox utilitario --- */
+.flex            { display: flex; }
+.flex-col        { display: flex; flex-direction: column; }
+.items-center    { align-items: center; }
+.items-start     { align-items: flex-start; }
+.justify-center  { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.gap-2           { gap: var(--space-2); }
+.gap-4           { gap: var(--space-4); }
+.gap-6           { gap: var(--space-6); }
+.gap-8           { gap: var(--space-8); }
+
+/* --- Grid utilitario --- */
+.grid            { display: grid; }
+
+/* --- Visibilidad responsiva --- */
+.hide-mobile {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .hide-mobile {
+    display: revert;
+  }
+
+  .hide-desktop {
+    display: none;
+  }
+
+  .container {
+    --container-padding: var(--space-8); /* 32px en tablet+ */
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    --container-padding: var(--space-10); /* 40px en desktop */
+  }
+}
+
+/* --- Sombras utilitarias --- */
+.shadow-sm       { box-shadow: var(--shadow-sm); }
+.shadow-md       { box-shadow: var(--shadow-md); }
+.shadow-lg       { box-shadow: var(--shadow-lg); }
+.shadow-card     { box-shadow: var(--shadow-card); }
+
+/* --- Border radius utilitario --- */
+.rounded-sm      { border-radius: var(--radius-sm); }
+.rounded-md      { border-radius: var(--radius-md); }
+.rounded-lg      { border-radius: var(--radius-lg); }
+.rounded-full    { border-radius: var(--radius-full); }
+
+/* --- Overflow --- */
+.overflow-hidden { overflow: hidden; }
+.truncate        {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* --- Aspect ratio --- */
+.aspect-square   { aspect-ratio: 1 / 1; }
+.aspect-video    { aspect-ratio: 16 / 9; }
+.aspect-book     { aspect-ratio: 2 / 3; }  /* Portada de libro */
+
+/* --- Imagen de objeto --- */
+.object-cover    { object-fit: cover; object-position: center; }
+.object-contain  { object-fit: contain; }
+
+/* --- Placeholder de imagen (mientras carga) --- */
+.img-placeholder {
+  background: var(--color-surface-raised);
+  background-image: linear-gradient(
+    90deg,
+    var(--color-surface-raised) 0%,
+    var(--color-bg-soft) 50%,
+    var(--color-surface-raised) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .img-placeholder {
+    animation: none;
+  }
+}
+
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* --- Separador decorativo --- */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: var(--color-border);
+  border: none;
+  margin: var(--space-8) 0;
+}
+
+.divider--green {
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--color-primary-soft),
+    transparent
+  );
+}
+
+/* ============================================================
+   FIN DE BASE.CSS
+   Siguiente archivo: components.css
+   ============================================================ */

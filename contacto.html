@@ -1,0 +1,375 @@
+﻿<!DOCTYPE html>
+<html lang="es-EC" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="assets/img/isotipo.png">
+  <title>Contacto — Editorial Ecuafuturo</title>
+  <meta name="description" content="Contacta a Editorial Ecuafuturo: solicita información sobre colecciones institucionales, recursos docentes o cualquier consulta sobre nuestros libros.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ecuafuturo.edu.ec/contacto.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contacto — Editorial Ecuafuturo">
+  <meta property="og:description" content="Escríbenos para seleccionar colecciones, conocer recursos docentes o resolver cualquier consulta.">
+  <meta property="og:image" content="/assets/img/og/og-contacto.webp">
+  <meta property="og:url" content="https://ecuafuturo.edu.ec/contacto.html">
+  <meta property="og:locale" content="es_EC">
+  <meta property="og:site_name" content="Editorial Ecuafuturo">
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages/contacto.css">
+</head>
+<body>
+
+  <a href="#main" class="sr-only">Saltar al contenido principal</a>
+
+  <!-- ✏️ EDITAR: Navbar -->
+  <header class="navbar" role="banner">
+    <div class="navbar__container">
+      <a href="index.html" class="navbar__logo" aria-label="Inicio — Editorial Ecuafuturo">
+        <img src="assets/img/logo.png" alt="Ediciones Ecuafuturo" class="navbar__logo-img navbar__logo-light" width="180" height="48" loading="eager">
+        <img src="assets/img/logo-dark.png" alt="Ediciones Ecuafuturo" class="navbar__logo-img navbar__logo-dark" width="180" height="48" loading="eager">
+      </a>
+      <nav class="navbar__nav" aria-label="Navegación principal">
+        <a href="catalogo.html" class="navbar__link">Catálogo</a>
+        <a href="docentes.html" class="navbar__link">Docentes</a>
+        <a href="plataforma.html" class="navbar__link">Plataforma</a>
+        <a href="nosotros.html" class="navbar__link">Nosotros</a>
+        <a href="contacto.html" class="navbar__link btn btn-primary btn-sm" aria-current="page" style="margin-left:8px">Contacto</a>
+      </nav>
+      <div class="navbar__actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Activar modo oscuro">
+          <i data-lucide="moon" aria-hidden="true"></i>
+        </button>
+        <button id="navbar-hamburger" class="navbar__hamburger" aria-expanded="false" aria-controls="navbar-mobile" aria-label="Abrir menú">
+          <i data-lucide="menu" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+    <nav id="navbar-mobile" class="navbar__mobile" aria-label="Menú móvil">
+      <a href="catalogo.html" class="navbar__mobile-link">Catálogo</a>
+      <a href="docentes.html" class="navbar__mobile-link">Docentes</a>
+      <a href="plataforma.html" class="navbar__mobile-link">Plataforma</a>
+      <a href="nosotros.html" class="navbar__mobile-link">Nosotros</a>
+      <a href="contacto.html" class="navbar__mobile-link navbar__mobile-cta btn btn-primary" aria-current="page">Contacto</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ✏️ EDITAR: Header de contacto -->
+    <section class="contacto-header">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Ubicación en el sitio">
+          <a href="index.html">Inicio</a>
+          <span class="breadcrumb__sep" aria-hidden="true">›</span>
+          <span class="breadcrumb__current" aria-current="page">Contacto</span>
+        </nav>
+        <h1 style="margin-top:var(--space-4)">Hablemos</h1>
+        <p style="margin-top:var(--space-3);max-width:520px;color:var(--color-text);font-size:var(--text-lg)">
+          ¿Tu institución está eligiendo libros para el aula? ¿Necesitas información sobre colecciones, plataforma o capacitación docente? Escríbenos.
+        </p>
+      </div>
+    </section>
+
+    <!-- ✏️ EDITAR: Layout de contacto -->
+    <section class="contacto-layout container" aria-label="Información de contacto y formulario">
+
+      <!-- Columna izquierda: información -->
+      <aside class="contacto-info">
+
+        <!-- WhatsApp destacado -->
+        <a href="https://wa.me/593995416060?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20las%20colecciones%20de%20Ecuafuturo." class="whatsapp-cta" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp Business">
+          <div class="whatsapp-cta__icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+          </div>
+          <div>
+            <p class="whatsapp-cta__label">Respuesta rápida</p>
+            <p class="whatsapp-cta__text">Escribir por WhatsApp</p>
+          </div>
+          <i data-lucide="arrow-right" style="margin-left:auto;color:var(--color-text)" aria-hidden="true"></i>
+        </a>
+
+        <div>
+          <h2 style="font-size:var(--text-xl);margin-bottom:var(--space-6)">Información de contacto</h2>
+          <div style="display:flex;flex-direction:column;gap:var(--space-6)">
+            <div class="contacto-item">
+              <div class="contacto-item__icon" aria-hidden="true">
+                <i data-lucide="mail" style="width:22px;height:22px;"></i>
+              </div>
+              <div>
+                <p class="contacto-item__label">Email</p>
+                <p class="contacto-item__value">
+                  <a href="mailto:ediciones_ecuafuturo@hotmail.com">ediciones_ecuafuturo@hotmail.com</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="contacto-item">
+              <div class="contacto-item__icon" aria-hidden="true">
+                <i data-lucide="phone" style="width:22px;height:22px;"></i>
+              </div>
+              <div>
+                <p class="contacto-item__label">Teléfono / WhatsApp</p>
+                <p class="contacto-item__value">
+                  <a href="https://wa.me/593995416060" target="_blank" rel="noopener">+593 99 541 6060</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="contacto-item">
+              <div class="contacto-item__icon" aria-hidden="true">
+                <i data-lucide="map-pin" style="width:22px;height:22px;"></i>
+              </div>
+              <div>
+                <p class="contacto-item__label">Dirección</p>
+                <p class="contacto-item__value">Francisco Fuentes N° OE4-146 y Juan Palacios, Quito - Ecuador</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Motivos de contacto -->
+        <div style="background:var(--color-surface-raised);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-6)">
+          <h3 style="font-size:var(--text-lg);margin-bottom:var(--space-4)">¿En qué podemos ayudarte?</h3>
+          <ul style="display:flex;flex-direction:column;gap:var(--space-3)">
+            <li style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-sm);color:var(--color-text)">
+              <i data-lucide="building-2" style="color:var(--color-primary);width:18px;height:18px;flex-shrink:0;" aria-hidden="true"></i>
+              Selección de colecciones para instituciones
+            </li>
+            <li style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-sm);color:var(--color-text)">
+              <i data-lucide="graduation-cap" style="color:var(--color-primary);width:18px;height:18px;flex-shrink:0;" aria-hidden="true"></i>
+              Formación docente especializada
+            </li>
+            <li style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-sm);color:var(--color-text)">
+              <i data-lucide="monitor" style="color:var(--color-primary);width:18px;height:18px;flex-shrink:0;" aria-hidden="true"></i>
+              Plataforma digital de lectura activa
+            </li>
+            <li style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-sm);color:var(--color-text)">
+              <i data-lucide="pen-line" style="color:var(--color-primary);width:18px;height:18px;flex-shrink:0;" aria-hidden="true"></i>
+              Propuestas de autores e ilustradores
+            </li>
+            <li style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-sm);color:var(--color-text)">
+              <i data-lucide="message-circle" style="color:var(--color-primary);width:18px;height:18px;flex-shrink:0;" aria-hidden="true"></i>
+              Consultas generales
+            </li>
+          </ul>
+        </div>
+
+      </aside>
+
+      <!-- Columna derecha: formulario -->
+      <!-- ✏️ EDITAR: cambiar action por URL de Netlify Forms o Formspree cuando esté configurado -->
+      <div class="contacto-form-card">
+        <h2>Envíanos un mensaje</h2>
+
+        <form
+          id="contact-form"
+          name="contacto"
+          method="POST"
+          action="#"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          novalidate
+        >
+          <!-- Honeypot anti-spam -->
+          <div style="display:none" aria-hidden="true">
+            <label>No llenar si eres humano: <input name="bot-field" tabindex="-1"></label>
+          </div>
+          <input type="hidden" name="form-name" value="contacto">
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="nombre">
+                Nombre completo <span aria-label="obligatorio">*</span>
+              </label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                class="form-input"
+                placeholder="Ej: María García"
+                autocomplete="name"
+                required
+                aria-required="true"
+                aria-describedby="error-nombre"
+              >
+              <span id="error-nombre" class="form-error" data-error="nombre" role="alert" style="display:none">
+                <i data-lucide="alert-circle" style="width:14px;height:14px;" aria-hidden="true"></i>
+              </span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">
+                Correo electrónico <span aria-label="obligatorio">*</span>
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-input"
+                placeholder="tu@correo.com"
+                autocomplete="email"
+                required
+                aria-required="true"
+                aria-describedby="error-email"
+              >
+              <span id="error-email" class="form-error" data-error="email" role="alert" style="display:none">
+                <i data-lucide="alert-circle" style="width:14px;height:14px;" aria-hidden="true"></i>
+              </span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="institucion">Institución educativa</label>
+              <input
+                type="text"
+                id="institucion"
+                name="institucion"
+                class="form-input"
+                placeholder="Ej: Unidad Educativa Salesiana"
+                autocomplete="organization"
+              >
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="ciudad">Ciudad</label>
+              <input
+                type="text"
+                id="ciudad"
+                name="ciudad"
+                class="form-input"
+                placeholder="Ej: Quito"
+                autocomplete="address-level2"
+              >
+            </div>
+
+            <div class="form-group form-group--full">
+              <label class="form-label" for="motivo">¿Motivo de contacto?</label>
+              <select id="motivo" name="motivo" class="form-select form-input">
+                <option value="">Selecciona una opción…</option>
+                <option value="adopcion">Selección de colecciones para mi institución</option>
+                <option value="docentes">Recursos para docentes</option>
+                <option value="plataforma">Plataforma digital</option>
+                <option value="autor">Soy autor o ilustrador</option>
+                <option value="otro">Otra consulta</option>
+              </select>
+            </div>
+
+            <div class="form-group form-group--full">
+              <label class="form-label" for="mensaje">
+                Mensaje <span aria-label="obligatorio">*</span>
+              </label>
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                class="form-textarea"
+                placeholder="Cuéntanos cómo podemos ayudarte…"
+                required
+                aria-required="true"
+                aria-describedby="error-mensaje"
+              ></textarea>
+              <span id="error-mensaje" class="form-error" data-error="mensaje" role="alert" style="display:none">
+                <i data-lucide="alert-circle" style="width:14px;height:14px;" aria-hidden="true"></i>
+              </span>
+            </div>
+
+            <div class="form-group form-group--full">
+              <label class="form-label" for="como-conocio">¿Cómo nos conociste?</label>
+              <select id="como-conocio" name="como-conocio" class="form-select form-input">
+                <option value="">Selecciona una opción…</option>
+                <option value="docente">Me lo recomendó un docente o colega</option>
+                <option value="redes">Redes sociales</option>
+                <option value="busqueda">Búsqueda en internet</option>
+                <option value="evento">Evento educativo o feria</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="margin-top:var(--space-6)">
+            <button type="submit" class="btn btn-primary btn-lg" style="width:100%">
+              <i data-lucide="send" aria-hidden="true"></i>
+              Enviar mensaje
+            </button>
+          </div>
+
+          <p style="font-size:var(--text-xs);color:var(--color-text);margin-top:var(--space-4);text-align:center;opacity:0.7">
+            Al enviar este formulario aceptas que usemos tu información para responderte. No compartimos tus datos con terceros.
+          </p>
+        </form>
+
+        <!-- Mensaje de éxito (oculto hasta envío) -->
+        <div class="form-success" role="status" aria-live="polite">
+          <div class="form-success__icon" aria-hidden="true">
+            <i data-lucide="check-circle" style="width:36px;height:36px;"></i>
+          </div>
+          <h3 style="font-size:var(--text-2xl)">¡Mensaje enviado!</h3>
+          <p style="color:var(--color-text);max-width:360px">
+            Gracias por escribirnos. Te responderemos en los próximos 2 días hábiles al correo que nos indicaste.
+          </p>
+          <a href="index.html" class="btn btn-primary">Volver al inicio</a>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="assets/img/logo-dark.png" alt="Ediciones Ecuafuturo" class="footer__logo-img" width="160" height="42">
+          <p>Libros para Educación Básica y Bachillerato: comprensión lectora, literacidad crítica, ortografía y funciones ejecutivas.</p>
+        </div>
+        <nav aria-label="Páginas del sitio">
+          <p class="footer__heading">Sitio</p>
+          <ul class="footer__links">
+            <li><a href="catalogo.html" class="footer__link">Catálogo</a></li>
+            <li><a href="docentes.html" class="footer__link">Docentes</a></li>
+            <li><a href="plataforma.html" class="footer__link">Plataforma</a></li>
+            <li><a href="nosotros.html" class="footer__link">Nosotros</a></li>
+            <li><a href="contacto.html" class="footer__link">Contacto</a></li>
+          </ul>
+        </nav>
+        <div>
+          <p class="footer__heading">Contacto</p>
+          <ul class="footer__links">
+            <li><a href="mailto:ediciones_ecuafuturo@hotmail.com" class="footer__link">ediciones_ecuafuturo@hotmail.com</a></li>
+            <li><a href="https://wa.me/593995416060" class="footer__link" target="_blank" rel="noopener">09 9541 6060</a></li>
+            <li><span class="footer__link">Quito - Ecuador</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 Editorial Ecuafuturo. Todos los derechos reservados.</p>
+        <p class="footer__copy">Francisco Fuentes N° OE4-146 y Juan Palacios</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/593995416060?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20el%20plan%20lector%20de%20Ecuafuturo." class="whatsapp-fab" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/newsletter.js" defer></script>
+
+</body>
+</html>
+

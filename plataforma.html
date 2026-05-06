@@ -1,0 +1,356 @@
+﻿<!DOCTYPE html>
+<html lang="es-EC" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="assets/img/isotipo.png">
+  <title>Plataforma Digital de Lectura Activa — Editorial Ecuafuturo</title>
+  <meta name="description" content="La plataforma digital de Ecuafuturo acompaña talleres interactivos de comprensión lectora literal, inferencial y crítica, con seguimiento pedagógico y recursos docentes.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ecuafuturo.edu.ec/plataforma.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Plataforma Digital de Lectura Activa — Editorial Ecuafuturo">
+  <meta property="og:description" content="Talleres interactivos, seguimiento pedagógico y recursos complementarios para docentes.">
+  <meta property="og:image" content="/assets/img/og/og-plataforma.webp">
+  <meta property="og:url" content="https://ecuafuturo.edu.ec/plataforma.html">
+  <meta property="og:locale" content="es_EC">
+  <meta property="og:site_name" content="Editorial Ecuafuturo">
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages/plataforma.css">
+</head>
+<body>
+
+  <a href="#main" class="sr-only">Saltar al contenido principal</a>
+
+  <!-- ✏️ EDITAR: Navbar -->
+  <header class="navbar" role="banner">
+    <div class="navbar__container">
+      <a href="index.html" class="navbar__logo" aria-label="Inicio — Editorial Ecuafuturo">
+        <img src="assets/img/logo.png" alt="Ediciones Ecuafuturo" class="navbar__logo-img navbar__logo-light" width="180" height="48" loading="eager">
+        <img src="assets/img/logo-dark.png" alt="Ediciones Ecuafuturo" class="navbar__logo-img navbar__logo-dark" width="180" height="48" loading="eager">
+      </a>
+      <nav class="navbar__nav" aria-label="Navegación principal">
+        <a href="catalogo.html" class="navbar__link">Catálogo</a>
+        <a href="docentes.html" class="navbar__link">Docentes</a>
+        <a href="plataforma.html" class="navbar__link" aria-current="page">Plataforma</a>
+        <a href="nosotros.html" class="navbar__link">Nosotros</a>
+        <a href="contacto.html" class="navbar__link btn btn-primary btn-sm" style="margin-left:8px">Contacto</a>
+      </nav>
+      <div class="navbar__actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Activar modo oscuro">
+          <i data-lucide="moon" aria-hidden="true"></i>
+        </button>
+        <button id="navbar-hamburger" class="navbar__hamburger" aria-expanded="false" aria-controls="navbar-mobile" aria-label="Abrir menú">
+          <i data-lucide="menu" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+    <nav id="navbar-mobile" class="navbar__mobile" aria-label="Menú móvil">
+      <a href="catalogo.html" class="navbar__mobile-link">Catálogo</a>
+      <a href="docentes.html" class="navbar__mobile-link">Docentes</a>
+      <a href="plataforma.html" class="navbar__mobile-link" aria-current="page">Plataforma</a>
+      <a href="nosotros.html" class="navbar__mobile-link">Nosotros</a>
+      <a href="contacto.html" class="navbar__mobile-link navbar__mobile-cta btn btn-primary">Contacto</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ✏️ EDITAR: Hero de la plataforma -->
+    <section class="plataforma-hero" aria-labelledby="plataforma-hero-title">
+      <div class="plataforma-hero__glow" aria-hidden="true"></div>
+      <div class="container">
+        <div class="plataforma-hero__inner">
+          <div>
+            <span class="plataforma-hero__tag">
+              <i data-lucide="cpu" aria-hidden="true" style="width:14px;height:14px;"></i>
+              Plataforma digital de lectura activa
+            </span>
+            <h1 id="plataforma-hero-title">
+              Talleres interactivos para el <em>proceso lector</em>
+            </h1>
+            <p class="plataforma-hero__desc">
+              Los libros de la colección incluyen acceso a una plataforma en línea donde los estudiantes desarrollan comprensión literal, inferencial y crítica, con seguimiento pedagógico y recursos complementarios para docentes.
+            </p>
+            <div style="display:flex;flex-wrap:wrap;gap:var(--space-4)">
+              <a href="contacto.html" class="btn btn-accent btn-lg">
+                <i data-lucide="send" aria-hidden="true"></i>
+                Solicitar acceso de prueba
+              </a>
+              <a href="docentes.html" class="btn btn-ghost btn-lg" style="color:rgba(255,255,255,0.85)">
+                Ver recursos docentes
+              </a>
+            </div>
+          </div>
+
+          <!-- ✏️ EDITAR: reemplazar por screenshot real cuando la plataforma esté lista -->
+          <div class="plataforma-hero__mockup" aria-label="Vista previa de la plataforma de lectura Ecuafuturo">
+            <div class="app-mockup">
+              <!-- Barra de la app -->
+              <div class="app-mockup__bar">
+                <div class="app-mockup__dots" aria-hidden="true">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="app-mockup__url">app.ecuafuturo.com</div>
+                <div class="app-mockup__tabs">
+                  <span class="app-mockup__tab app-mockup__tab--active">Literal</span>
+                  <span class="app-mockup__tab">Inferencial</span>
+                  <span class="app-mockup__tab">Crítico</span>
+                </div>
+              </div>
+              <!-- Contenido de la app -->
+              <div class="app-mockup__body">
+                <div class="app-mockup__book-info">
+                  <span class="app-mockup__book-chip">Frankenstein · Mary Shelley</span>
+                  <span class="app-mockup__progress">Capítulo 3 · 68% completado</span>
+                </div>
+                <div class="app-mockup__passage">
+                  <p>"Era ya casi la una de la madrugada cuando llegué al término de mis esfuerzos. Con una ansiedad casi cercana a la agonía, reuní los instrumentos de vida a mi alrededor…"</p>
+                </div>
+                <div class="app-mockup__question">
+                  <p class="app-mockup__question-label">Pregunta 1 de 4 · Comprensión literal</p>
+                  <p class="app-mockup__question-text">¿Qué estaba haciendo el protagonista en ese momento?</p>
+                </div>
+                <div class="app-mockup__options">
+                  <button class="app-mockup__option app-mockup__option--selected">Trabajando en un experimento científico</button>
+                  <button class="app-mockup__option">Escribiendo en su diario personal</button>
+                  <button class="app-mockup__option">Observando una tormenta</button>
+                </div>
+                <div class="app-mockup__footer">
+                  <div class="app-mockup__score">
+                    <i data-lucide="check" aria-hidden="true"></i> 3 respuestas correctas
+                  </div>
+                  <button class="app-mockup__next">Siguiente <i data-lucide="arrow-right" aria-hidden="true"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Plataforma -->
+    <section class="section ia-section" aria-labelledby="ia-title">
+      <div class="container">
+        <div class="ia-section__inner">
+          <div>
+            <span class="section-header__eyebrow">Acompañamiento digital</span>
+            <h2 id="ia-title" style="margin-top:var(--space-3)">Lectura que trasciende el papel</h2>
+            <div class="ia-section__features">
+              <div class="ia-feature">
+                <div class="ia-feature__icon" aria-hidden="true">
+                  <i data-lucide="message-circle" style="width:22px;height:22px;"></i>
+                </div>
+                <div>
+                  <p class="ia-feature__title">Talleres interactivos</p>
+                  <p>El estudiante trabaja actividades de comprensión lectora conectadas con el libro físico.</p>
+                </div>
+              </div>
+              <div class="ia-feature">
+                <div class="ia-feature__icon" aria-hidden="true">
+                  <i data-lucide="help-circle" style="width:22px;height:22px;"></i>
+                </div>
+                <div>
+                  <p class="ia-feature__title">Seguimiento pedagógico</p>
+                  <p>El docente cuenta con insumos para acompañar el avance lector y detectar necesidades de refuerzo.</p>
+                </div>
+              </div>
+              <div class="ia-feature">
+                <div class="ia-feature__icon" aria-hidden="true">
+                  <i data-lucide="book-open" style="width:22px;height:22px;"></i>
+                </div>
+                <div>
+                  <p class="ia-feature__title">Recursos complementarios</p>
+                  <p>Material de apoyo para planificar, reforzar y extender el trabajo lector dentro y fuera del aula.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Demo visual del método -->
+          <div class="ia-section__visual" aria-label="Ruta de actividades de comprensión lectora">
+            <p class="chat-bubble__label" style="font-size:var(--text-xs);color:var(--color-text);margin-bottom:var(--space-2);font-weight:700;">RUTA DE ACTIVIDAD</p>
+
+            <div class="chat-bubble chat-bubble--student">
+              <p class="chat-bubble__label">Nivel literal</p>
+              Identifica personajes, hechos, lugares y secuencias explícitas del texto.
+            </div>
+
+            <div class="chat-bubble chat-bubble--ai">
+              <p class="chat-bubble__label">Nivel inferencial</p>
+              Relaciona pistas, interpreta motivaciones y explica causas o consecuencias.
+            </div>
+
+            <div class="chat-bubble chat-bubble--student">
+              <p class="chat-bubble__label">Nivel crítico</p>
+              Conecta el texto con su contexto y formula una postura argumentada.
+            </div>
+
+            <div class="chat-bubble chat-bubble--ai">
+              <p class="chat-bubble__label">Docente</p>
+              Revisa avances, refuerza habilidades y acompaña el proceso lector.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ✏️ EDITAR: Tres tipos de actividades -->
+    <section class="section section--soft" aria-labelledby="actividades-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-header__eyebrow">Metodología</span>
+          <h2 id="actividades-title">Tres niveles de comprensión lectora</h2>
+          <p>Las actividades están diseñadas para desarrollar progresivamente las habilidades lectoras, desde la comprensión básica hasta el pensamiento crítico.</p>
+        </div>
+
+        <div class="activities-grid">
+          <article class="activity-card">
+            <div class="activity-card__bar" aria-hidden="true"></div>
+            <p class="activity-card__level">Nivel 1</p>
+            <h3>Comprensión literal</h3>
+            <p style="color:var(--color-text)">El estudiante identifica y recupera información explícita del texto: personajes, hechos, lugares, secuencias de eventos. Preguntas directas sobre lo que dice el texto.</p>
+            <div style="margin-top:var(--space-4)">
+              <span class="badge badge--nivel">Quién</span>
+              <span class="badge badge--nivel" style="margin-left:var(--space-1)">Qué</span>
+              <span class="badge badge--nivel" style="margin-left:var(--space-1)">Cuándo</span>
+              <span class="badge badge--nivel" style="margin-left:var(--space-1)">Dónde</span>
+            </div>
+          </article>
+
+          <article class="activity-card">
+            <div class="activity-card__bar" aria-hidden="true"></div>
+            <p class="activity-card__level">Nivel 2</p>
+            <h3>Comprensión inferencial</h3>
+            <p style="color:var(--color-text)">El estudiante deduce información implícita, interpreta el sentido de expresiones, infiere las motivaciones de los personajes y comprende las relaciones causa-efecto.</p>
+            <div style="margin-top:var(--space-4)">
+              <span class="badge badge--genre">Por qué</span>
+              <span class="badge badge--genre" style="margin-left:var(--space-1)">Cómo</span>
+              <span class="badge badge--genre" style="margin-left:var(--space-1)">Qué implica</span>
+            </div>
+          </article>
+
+          <article class="activity-card">
+            <div class="activity-card__bar" aria-hidden="true"></div>
+            <p class="activity-card__level">Nivel 3</p>
+            <h3>Valoración crítica</h3>
+            <p style="color:var(--color-text)">El estudiante emite juicios argumentados sobre el texto, lo conecta con su propia experiencia y con el contexto social, y desarrolla una postura personal fundamentada.</p>
+            <div style="margin-top:var(--space-4)">
+              <span class="badge badge--new">Qué opino</span>
+              <span class="badge badge--new" style="margin-left:var(--space-1)">Qué valoro</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ✏️ EDITAR: Calificación automática -->
+    <section class="section" aria-labelledby="calificacion-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-header__eyebrow">Evaluación</span>
+          <h2 id="calificacion-title">Seguimiento pedagógico y trabajo complementario</h2>
+          <p>La plataforma ordena el trabajo lector para que el docente pueda acompañar con más claridad el avance de cada grupo.</p>
+        </div>
+
+        <div class="features-grid">
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">
+              <i data-lucide="zap" style="width:28px;height:28px;"></i>
+            </div>
+            <h3>Práctica organizada</h3>
+            <p>Las actividades mantienen una progresión de comprensión y ayudan a sostener el hábito lector.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">
+              <i data-lucide="bar-chart-2" style="width:28px;height:28px;"></i>
+            </div>
+            <h3>Visibilidad del avance</h3>
+            <p>El docente cuenta con una base para observar participación, desempeño y necesidades de acompañamiento.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">
+              <i data-lucide="repeat" style="width:28px;height:28px;"></i>
+            </div>
+            <h3>Refuerzo fuera del aula</h3>
+            <p>El estudiante puede continuar el trabajo lector en casa con una ruta clara y recursos de apoyo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--soft" aria-labelledby="plataforma-cta-title">
+      <div class="container">
+        <div class="cta-banner">
+          <h2 id="plataforma-cta-title">¿Quieres usar la plataforma con tu institución?</h2>
+          <p>Conversemos sobre niveles, textos y acompañamiento docente para organizar la ruta de lectura activa.</p>
+          <div class="cta-banner__actions">
+            <a href="contacto.html" class="btn btn-accent btn-lg">
+              <i data-lucide="send" aria-hidden="true"></i>
+              Solicitar acceso de prueba
+            </a>
+            <a href="catalogo.html" class="btn btn-ghost btn-lg">Ver catálogo de libros</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="assets/img/logo-dark.png" alt="Ediciones Ecuafuturo" class="footer__logo-img" width="160" height="42">
+          <p>Libros para Educación Básica y Bachillerato: comprensión lectora, literacidad crítica, ortografía y funciones ejecutivas.</p>
+        </div>
+        <nav aria-label="Páginas del sitio">
+          <p class="footer__heading">Sitio</p>
+          <ul class="footer__links">
+            <li><a href="catalogo.html" class="footer__link">Catálogo</a></li>
+            <li><a href="docentes.html" class="footer__link">Docentes</a></li>
+            <li><a href="plataforma.html" class="footer__link">Plataforma</a></li>
+            <li><a href="nosotros.html" class="footer__link">Nosotros</a></li>
+            <li><a href="contacto.html" class="footer__link">Contacto</a></li>
+          </ul>
+        </nav>
+        <div>
+          <p class="footer__heading">Contacto</p>
+          <ul class="footer__links">
+            <li><a href="mailto:ediciones_ecuafuturo@hotmail.com" class="footer__link">ediciones_ecuafuturo@hotmail.com</a></li>
+            <li><a href="https://wa.me/593995416060" class="footer__link" target="_blank" rel="noopener">09 9541 6060</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 Editorial Ecuafuturo. Todos los derechos reservados.</p>
+        <p class="footer__copy">Francisco Fuentes N° OE4-146 y Juan Palacios</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/593995416060?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20la%20plataforma%20de%20Ecuafuturo." class="whatsapp-fab" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+
+</body>
+</html>

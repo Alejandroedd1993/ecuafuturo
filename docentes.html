@@ -1,0 +1,299 @@
+﻿<!DOCTYPE html>
+<html lang="es-EC" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="assets/img/isotipo.png">
+  <title>Recursos para Docentes — Editorial Ecuafuturo</title>
+  <meta name="description" content="Propuesta docente de Ecuafuturo: competencia lectora, literacidad crítica, formación especializada y plataforma digital de lectura activa.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ecuafuturo.edu.ec/docentes.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Recursos para Docentes — Editorial Ecuafuturo">
+  <meta property="og:description" content="Guías de lectura, planificaciones de unidad y recursos pedagógicos para instituciones educativas.">
+  <meta property="og:image" content="/assets/img/og/og-docentes.webp">
+  <meta property="og:url" content="https://ecuafuturo.edu.ec/docentes.html">
+  <meta property="og:locale" content="es_EC">
+  <meta property="og:site_name" content="Editorial Ecuafuturo">
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages/docentes.css">
+</head>
+<body>
+
+  <a href="#main" class="sr-only">Saltar al contenido principal</a>
+
+  <!-- ✏️ EDITAR: Navbar -->
+  <header class="navbar" role="banner">
+    <div class="navbar__container">
+      <a href="index.html" class="navbar__logo" aria-label="Inicio — Editorial Ecuafuturo">
+        <img src="assets/img/logo.png" alt="Ediciones Ecuafuturo" class="navbar__logo-img navbar__logo-light" width="180" height="48" loading="eager">
+        <img src="assets/img/logo-dark.png" alt="Ediciones Ecuafuturo" class="navbar__logo-img navbar__logo-dark" width="180" height="48" loading="eager">
+      </a>
+      <nav class="navbar__nav" aria-label="Navegación principal">
+        <a href="catalogo.html" class="navbar__link">Catálogo</a>
+        <a href="docentes.html" class="navbar__link" aria-current="page">Docentes</a>
+        <a href="plataforma.html" class="navbar__link">Plataforma</a>
+        <a href="nosotros.html" class="navbar__link">Nosotros</a>
+        <a href="contacto.html" class="navbar__link btn btn-primary btn-sm" style="margin-left:8px">Contacto</a>
+      </nav>
+      <div class="navbar__actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Activar modo oscuro">
+          <i data-lucide="moon" aria-hidden="true"></i>
+        </button>
+        <button id="navbar-hamburger" class="navbar__hamburger" aria-expanded="false" aria-controls="navbar-mobile" aria-label="Abrir menú">
+          <i data-lucide="menu" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+    <nav id="navbar-mobile" class="navbar__mobile" aria-label="Menú móvil">
+      <a href="catalogo.html" class="navbar__mobile-link">Catálogo</a>
+      <a href="docentes.html" class="navbar__mobile-link" aria-current="page">Docentes</a>
+      <a href="plataforma.html" class="navbar__mobile-link">Plataforma</a>
+      <a href="nosotros.html" class="navbar__mobile-link">Nosotros</a>
+      <a href="contacto.html" class="navbar__mobile-link navbar__mobile-cta btn btn-primary">Contacto</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ✏️ EDITAR: Hero para docentes -->
+    <section class="docentes-hero docentes-hero--with-photo" aria-labelledby="docentes-hero-title">
+      <div class="container">
+        <div class="docentes-hero__inner">
+          <div>
+            <span class="docentes-hero__badge">
+              <i data-lucide="graduation-cap" aria-hidden="true"></i>
+              Para instituciones educativas
+            </span>
+            <h1 id="docentes-hero-title">Todo lo que necesitas para trabajar nuestros libros en el aula</h1>
+            <p style="font-size:var(--text-lg);color:var(--color-text);line-height:1.7;margin-top:var(--space-5);max-width:520px">
+              Una propuesta metodológica para trabajar comprensión literal, inferencial y crítica, con talleres por libro, plataforma digital de lectura activa y formación docente especializada.
+            </p>
+            <div style="display:flex;flex-wrap:wrap;gap:var(--space-4);margin-top:var(--space-8)">
+              <a href="contacto.html" class="btn btn-primary btn-lg">
+                <i data-lucide="building-2" aria-hidden="true"></i>
+                Solicitar orientación
+              </a>
+              <a href="#guias" class="btn btn-secondary btn-lg">
+                <i data-lucide="download" aria-hidden="true"></i>
+                Ver guías disponibles
+              </a>
+            </div>
+          </div>
+
+          <figure class="docentes-hero__photo-wrap">
+            <img
+              src="images/Docentes 2.png"
+              alt="Docente ecuatoriana sosteniendo el libro El Pequeño Vampiro de Ediciones Ecuafuturo en un aula con estudiantes leyendo al fondo"
+              class="docentes-hero__photo"
+              width="560" height="420"
+              loading="eager"
+              fetchpriority="high"
+            >
+            <div class="docentes-hero__photo-stats" aria-label="Datos de la propuesta editorial">
+              <div class="docentes-stat-mini">
+                <span class="docentes-stat-mini__num">+100</span>
+                <span class="docentes-stat-mini__label">títulos</span>
+              </div>
+              <div class="docentes-stat-mini">
+                <span class="docentes-stat-mini__num">5</span>
+                <span class="docentes-stat-mini__label">colecciones</span>
+              </div>
+              <div class="docentes-stat-mini">
+                <span class="docentes-stat-mini__num">3</span>
+                <span class="docentes-stat-mini__label">niveles de comprensión</span>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ✏️ EDITAR: Propuesta pedagógica -->
+    <section class="section section--soft" aria-labelledby="propuesta-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-header__eyebrow">Propuesta pedagógica</span>
+          <h2 id="propuesta-title">Una metodología para formar lectores críticos</h2>
+          <p>La propuesta aplica estrategias metacognitivas para que el estudiante lea las líneas, lea entre líneas y lea tras las líneas.</p>
+        </div>
+
+        <div class="propuesta-grid">
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">
+              <i data-lucide="file-text" style="width:28px;height:28px;"></i>
+            </div>
+            <h3>Talleres de lectura</h3>
+            <p>Los textos incorporan talleres estructurados para desarrollar comprensión literal, inferencial y crítica.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">
+              <i data-lucide="calendar" style="width:28px;height:28px;"></i>
+            </div>
+            <h3>Literacidad crítica</h3>
+            <p>Actividades que llevan al estudiante a comprender, interpretar, argumentar y sostener una postura propia.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">
+              <i data-lucide="check-square" aria-hidden="true" style="width:28px;height:28px;"></i>
+            </div>
+            <h3>Animación lectora pertinente</h3>
+            <p>Temas conectados con necesidades, conflictos y motivaciones reales del mundo interior del estudiante.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">
+              <i data-lucide="layers" style="width:28px;height:28px;"></i>
+            </div>
+            <h3>Colecciones complementarias</h3>
+            <p>Neuro-ortografía y Atención y Concentración fortalecen competencia escrita, planificación y autorregulación.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">
+              <i data-lucide="monitor" style="width:28px;height:28px;"></i>
+            </div>
+            <h3>Plataforma digital integrada</h3>
+            <p>Los estudiantes desarrollan talleres interactivos en línea con seguimiento pedagógico y recursos para docentes.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">
+              <i data-lucide="headphones" style="width:28px;height:28px;"></i>
+            </div>
+            <h3>Formación docente especializada</h3>
+            <p>Capacitación actualizada en Didáctica de la Lengua y la Literatura para garantizar impacto en el aula.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Secuencia metodológica -->
+    <section class="section" id="guias" aria-labelledby="guias-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-header__eyebrow">Cómo se trabaja</span>
+          <h2 id="guias-title">Tres niveles para leer mejor</h2>
+          <p>La propuesta avanza desde la recuperación de información hasta la interpretación y la valoración argumentada del texto.</p>
+        </div>
+
+        <div class="guides-grid">
+          <article class="guide-card">
+            <div class="guide-card__icon" aria-hidden="true">
+              <i data-lucide="list-checks" style="width:24px;height:24px;"></i>
+            </div>
+            <h3 class="guide-card__title">Comprensión literal</h3>
+            <p class="guide-card__book">Leer las líneas</p>
+            <p style="font-size:var(--text-sm);color:var(--color-text)">El estudiante identifica datos, personajes, secuencias, lugares y hechos explícitos del texto.</p>
+          </article>
+
+          <article class="guide-card">
+            <div class="guide-card__icon" aria-hidden="true">
+              <i data-lucide="brain" style="width:24px;height:24px;"></i>
+            </div>
+            <h3 class="guide-card__title">Comprensión inferencial</h3>
+            <p class="guide-card__book">Leer entre líneas</p>
+            <p style="font-size:var(--text-sm);color:var(--color-text)">Interpreta causas, motivaciones, relaciones y sentidos no dichos de manera directa.</p>
+          </article>
+
+          <article class="guide-card">
+            <div class="guide-card__icon" aria-hidden="true">
+              <i data-lucide="message-square-quote" style="width:24px;height:24px;"></i>
+            </div>
+            <h3 class="guide-card__title">Comprensión crítica</h3>
+            <p class="guide-card__book">Leer tras las líneas</p>
+            <p style="font-size:var(--text-sm);color:var(--color-text)">Construye juicios, conecta el texto con el contexto y argumenta una valoración personal.</p>
+          </article>
+
+          <article class="guide-card">
+            <div class="guide-card__icon" aria-hidden="true">
+              <i data-lucide="monitor" style="width:24px;height:24px;"></i>
+            </div>
+            <h3 class="guide-card__title">Trabajo digital</h3>
+            <p class="guide-card__book">Talleres interactivos</p>
+            <p style="font-size:var(--text-sm);color:var(--color-text)">La plataforma acompaña la práctica, el seguimiento pedagógico y los recursos complementarios.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ✏️ EDITAR: CTA adopción institucional -->
+    <section class="section section--soft" aria-labelledby="adopcion-title">
+      <div class="container">
+        <div class="adopcion-card">
+          <i data-lucide="building-2" style="width:56px;height:56px;color:var(--color-accent-lime);" aria-hidden="true"></i>
+          <h2 id="adopcion-title">¿Quieres elegir colecciones para tu institución?</h2>
+          <p>Te ayudamos a elegir las colecciones más pertinentes según nivel, objetivos lectores y necesidades de acompañamiento docente.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:var(--space-4);justify-content:center">
+            <a href="contacto.html" class="btn btn-accent btn-lg">
+              <i data-lucide="mail" aria-hidden="true"></i>
+              Solicitar información
+            </a>
+            <a href="https://wa.me/593995416060?text=Hola%2C%20me%20interesa%20recibir%20orientaci%C3%B3n%20sobre%20las%20colecciones%20de%20Ecuafuturo." class="btn btn-ghost btn-lg" target="_blank" rel="noopener">
+              <i data-lucide="message-circle" aria-hidden="true"></i>
+              Escribir por WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="assets/img/logo-dark.png" alt="Ediciones Ecuafuturo" class="footer__logo-img" width="160" height="42">
+          <p>Libros para Educación Básica y Bachillerato: comprensión lectora, literacidad crítica, ortografía y funciones ejecutivas.</p>
+        </div>
+        <nav aria-label="Páginas del sitio">
+          <p class="footer__heading">Sitio</p>
+          <ul class="footer__links">
+            <li><a href="catalogo.html" class="footer__link">Catálogo</a></li>
+            <li><a href="docentes.html" class="footer__link">Docentes</a></li>
+            <li><a href="plataforma.html" class="footer__link">Plataforma</a></li>
+            <li><a href="nosotros.html" class="footer__link">Nosotros</a></li>
+            <li><a href="contacto.html" class="footer__link">Contacto</a></li>
+          </ul>
+        </nav>
+        <div>
+          <p class="footer__heading">Contacto</p>
+          <ul class="footer__links">
+            <li><a href="mailto:ediciones_ecuafuturo@hotmail.com" class="footer__link">ediciones_ecuafuturo@hotmail.com</a></li>
+            <li><a href="https://wa.me/593995416060" class="footer__link" target="_blank" rel="noopener">09 9541 6060</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 Editorial Ecuafuturo. Todos los derechos reservados.</p>
+        <p class="footer__copy">Francisco Fuentes N° OE4-146 y Juan Palacios</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/593995416060?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20los%20libros%20de%20Ecuafuturo." class="whatsapp-fab" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+
+</body>
+</html>
+
