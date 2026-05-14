@@ -68,6 +68,7 @@
   color: var(--color-text);
   padding: var(--space-2) var(--space-3);
   border-radius: var(--radius-md);
+  letter-spacing: 0.05em;
   transition: color var(--transition-base), background-color var(--transition-base);
 }
 
@@ -214,6 +215,7 @@
 .footer__link {
   font-size: var(--text-sm);
   color: var(--color-footer-text);
+  letter-spacing: 0.05em;
   transition: color var(--transition-base);
 }
 
@@ -273,7 +275,8 @@
   font-size: var(--text-sm);
   font-weight: 700;
   padding: 0.75rem 1.5rem;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-full);
+  letter-spacing: 0.05em;
   min-height: 44px;
   transition: all var(--transition-base);
   text-decoration: none;
@@ -291,7 +294,6 @@
   background-color: var(--color-primary-hover);
   border-color: var(--color-primary-hover);
   transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
 }
 
 [data-theme="dark"] .btn-primary {
@@ -421,16 +423,16 @@
 .book-card {
   background-color: var(--color-surface);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-border);
   overflow: hidden;
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  transition: transform var(--transition-base), border-color var(--transition-base);
   display: flex;
   flex-direction: column;
 }
 
 .book-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary);
 }
 
 .book-card__cover {
