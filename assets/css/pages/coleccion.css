@@ -159,11 +159,10 @@
 .advisor-item {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  background:
-    linear-gradient(180deg, var(--color-surface) 0%, var(--color-surface-raised) 100%);
+  background: var(--color-surface);
   padding: var(--space-6);
   min-height: 250px;
-  box-shadow: var(--shadow-card);
+  box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
   position: relative;
@@ -289,16 +288,17 @@
 /* Tile individual */
 .nivel-tile {
   position: relative;
-  border-radius: var(--radius-lg);
+  border-radius: 0;
   overflow: hidden;
   min-height: 380px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   text-decoration: none;
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  transition: background-color var(--transition-base), border-color var(--transition-base);
   cursor: pointer;
-  box-shadow: var(--shadow-card);
+  box-shadow: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   isolation: isolate;
 }
 
@@ -317,8 +317,8 @@
 }
 
 .nivel-tile:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-xl);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-2xl);
 }
 
 .nivel-tile::after {
@@ -516,8 +516,7 @@
   padding: var(--space-7) var(--space-8);
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-border);
-  background:
-    linear-gradient(180deg, var(--color-surface) 0%, var(--color-surface-raised) 100%);
+  background: var(--color-surface);
   text-decoration: none;
   overflow: hidden;
   transition: transform var(--transition-base), box-shadow var(--transition-base);
@@ -525,23 +524,14 @@
 }
 
 .complementaria-tile:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
 }
 
-/* Barra lateral de color */
+/* Eliminamos barra lateral genérica */
 .complementaria-tile::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 4px;
-  border-radius: 4px 0 0 4px;
+  display: none;
 }
-
-.complementaria-tile--ortografia::before { background: linear-gradient(to bottom, #7c3aed, #a855f7); }
-.complementaria-tile--atencion::before   { background: linear-gradient(to bottom, #ea580c, #f59e0b); }
 
 /* Número decorativo de fondo */
 .complementaria-tile__bg-num {
@@ -567,10 +557,12 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  margin-right: var(--space-4);
+  color: var(--color-text-dark);
 }
 
-.complementaria-tile--ortografia .complementaria-tile__icon { background: #F5F3FF; color: #7c3aed; }
-.complementaria-tile--atencion   .complementaria-tile__icon { background: #FFF7ED; color: #ea580c; }
+.complementaria-tile--ortografia .complementaria-tile__icon { background: transparent; }
+.complementaria-tile--atencion   .complementaria-tile__icon { background: transparent; }
 
 .complementaria-tile__content {
   flex: 1;
@@ -745,10 +737,10 @@
   flex: 1 1 132px;
   min-width: 132px;
   padding: var(--space-4) var(--space-5);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-strong);
+  border-radius: 0;
   background: var(--color-surface);
-  box-shadow: var(--shadow-card);
+  box-shadow: none;
 }
 
 .coleccion-stat__num {
@@ -767,11 +759,9 @@
 .nivel-section {
   margin-bottom: var(--space-12);
   padding: var(--space-6);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  background:
-    linear-gradient(180deg, var(--color-surface) 0%, var(--color-surface-raised) 100%);
-  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-border-strong);
+  border-radius: 0;
+  background: var(--color-surface);
 }
 
 .nivel-section:last-child {
@@ -780,38 +770,35 @@
 
 .nivel-header {
   display: flex;
-  align-items: center;
-  gap: var(--space-3);
-  margin-bottom: var(--space-6);
-  padding-bottom: var(--space-3);
-  border-bottom: 2px solid var(--color-border);
+  align-items: baseline;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-border-strong);
 }
 
-.nivel-header__icon {
-  width: 36px;
-  height: 36px;
-  border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--color-primary);
-  color: #fff;
+.nivel-header__number {
   font-family: var(--font-display);
+  font-size: var(--text-4xl);
   font-weight: 800;
-  font-size: var(--text-sm);
-  flex-shrink: 0;
+  color: var(--color-text-dark);
+  line-height: 1;
+  min-width: 60px;
 }
 
 .nivel-header h2 {
-  font-size: var(--text-xl);
-  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
   color: var(--color-text-dark);
+  margin: 0;
 }
 
 .nivel-header__count {
-  font-size: var(--text-sm);
-  color: var(--color-text);
   margin-left: auto;
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
 }
 
 .libros-grid {
@@ -822,24 +809,23 @@
 
 .libro-card {
   background-color: var(--color-surface);
-  border-radius: var(--radius-md);
-  border: 1px solid var(--color-border);
+  border-radius: 0;
+  border: 1px solid var(--color-border-strong);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  transition: border-color var(--transition-base);
   text-decoration: none;
-  box-shadow: var(--shadow-xs);
 }
 
 .libro-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  border-color: var(--color-text-dark);
 }
 
 .libro-card__cover {
   aspect-ratio: 3 / 4;
-  background: linear-gradient(135deg, var(--color-bg-soft), var(--color-primary-soft));
+  background: var(--color-bg-soft);
+  border-bottom: 1px solid var(--color-border);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -903,33 +889,47 @@
 }
 
 .motivo-card {
-  background:
-    linear-gradient(180deg, var(--color-surface) 0%, var(--color-surface-raised) 100%);
-  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
   border: 1px solid var(--color-border);
   padding: var(--space-5);
   display: flex;
   gap: var(--space-4);
   align-items: flex-start;
-  box-shadow: var(--shadow-xs);
+  box-shadow: var(--shadow-sm);
   transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 
 .motivo-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
 
 .motivo-card__icon {
-  width: 44px;
-  height: 44px;
+  width: 58px;
+  height: 78px;
   border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
   background: var(--color-bg-soft);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--color-primary);
   flex-shrink: 0;
+  overflow: hidden;
+}
+
+.motivo-card__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  transform: scale(1.15);
+  transition: transform var(--transition-slow);
+}
+
+.motivo-card:hover .motivo-card__icon img {
+  transform: scale(1.18);
 }
 
 .motivo-card__title {
@@ -946,12 +946,8 @@
 }
 
 .libro-destacado {
-  background:
-    linear-gradient(90deg, var(--color-tech-grid) 1px, transparent 1px),
-    linear-gradient(180deg, var(--color-tech-grid) 1px, transparent 1px),
-    linear-gradient(135deg, var(--color-primary), var(--color-text-dark));
-  background-size: 42px 42px, 42px 42px, auto;
-  border-radius: var(--radius-lg);
+  background: var(--color-text-dark);
+  border: 1px solid var(--color-border-strong);
   padding: var(--space-8);
   display: grid;
   grid-template-columns: 1fr;
@@ -983,15 +979,10 @@
 
 .collection-cta-panel {
   margin-top: var(--space-12);
-  padding: var(--space-8);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  background:
-    linear-gradient(90deg, transparent 0, transparent calc(100% - 1px), var(--color-paper-texture) calc(100% - 1px)),
-    linear-gradient(180deg, transparent 0, transparent calc(100% - 1px), var(--color-paper-texture) calc(100% - 1px)),
-    linear-gradient(135deg, var(--color-bg-soft) 0%, var(--color-surface) 100%);
-  background-size: 34px 34px, 34px 34px, auto;
-  box-shadow: var(--shadow-card);
+  padding: var(--space-10) var(--space-8);
+  border: 1px solid var(--color-border-strong);
+  border-radius: 0;
+  background: var(--color-surface);
   text-align: center;
 }
 
